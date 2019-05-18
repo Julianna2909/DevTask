@@ -1,10 +1,11 @@
 ﻿
 using UnityEngine;
 
-public sealed class GameManager
+public sealed class   GameManager
 {
     private readonly Spawner spawner;
     private readonly GameConfig gameConfig;
+    private readonly Player player;
 
     private static GameManager instance;
 
@@ -12,10 +13,11 @@ public sealed class GameManager
 
     public GameConfig GameConfig => gameConfig;
 
-    public GameManager(Spawner spawner, GameConfig gameGameConfig)
+    public GameManager(Spawner spawner, GameConfig gameConfig, Player player)
     {
         this.spawner = spawner;
-        this.gameConfig = gameGameConfig;
+        this.gameConfig = gameConfig;
+        this.player = player;
 
         instance = this;
     }
@@ -31,4 +33,6 @@ public sealed class GameManager
         int randomIndex = Random.Range(0, maxIndex);
         return gameConfig.Colors[randomIndex];
     }
+
+    public void AddScore(int points) => player.AddScore(points);
 }

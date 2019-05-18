@@ -2,37 +2,25 @@
 
 public class BubbleView : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
 
-    private float currentPrice;
-    private float price;
-    private bool isShowing;
-    private float deltaPrice;
+    protected int points;
+    protected bool isShowing;
 
-    public void Init(Color color)
+    protected internal virtual void Init(Color color)
     {
+        points = GameManager.Instance.GameConfig.BubblePoints;
         spriteRenderer.color = color;
-        currentPrice = 10f;
-
         Show();
     }
 
-    public void Show()
+    public void Show() => isShowing = true;
+
+    public void Hide() => Destroy(gameObject);
+
+    protected virtual void OnMouseUpAsButton()
     {
-        isShowing = true;
-    }
-
-    private void Update()
-    {
-        if (!isShowing) return;
-
-        currentPrice -= deltaPrice;
-
-       // TODO: if tupped - Hide();
-    }
-
-    public void Hide()
-    {
-        Destroy(gameObject);
+        GameManager.Instance.AddScore(points);
+        Hide();
     }
 }
