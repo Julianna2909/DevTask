@@ -1,6 +1,6 @@
-﻿    using UnityEngine;
-
-public sealed class Player
+﻿namespace Game
+{
+    public sealed class Player
     {
         private int score;
 
@@ -10,3 +10,4 @@ public sealed class Player
 
         public void ResetScore() => score = 0;
     }
+}

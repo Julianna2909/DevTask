@@ -20,6 +20,5 @@ MonoBehaviour:
   - {r: 0.6650944, g: 0.7284002, b: 1, a: 1}
   gameDuration: 60
   spawnRate: 0.5
-  bublleRangeX: 2.5
-  bublleRangeY: 5
+  bubbleRange: {x: 2.5, y: 5}
   bubblePoints: 5
