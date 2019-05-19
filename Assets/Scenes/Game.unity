@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1594203373}
-  gameConfig: {fileID: 11400000, guid: 42a4db2537ecc9246b034f53b9529b3e, type: 2}
+  gameConfig: {fileID: 11400000, guid: c6403c016e8aea84091b053e4f42434e, type: 2}
   timer: {fileID: 304123853}
   mainMenuView: {fileID: 1759781989}
   gameMenuView: {fileID: 530252319}

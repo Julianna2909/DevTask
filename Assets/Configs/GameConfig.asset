@@ -18,7 +18,7 @@ MonoBehaviour:
   - {r: 0.6273585, g: 1, b: 0.9711619, a: 1}
   - {r: 1, g: 0.6462264, b: 0.9573974, a: 1}
   - {r: 0.6650944, g: 0.7284002, b: 1, a: 1}
-  gameDuration: 10
+  gameDuration: 60
   spawnRate: 0.5
   bublleRangeX: 2.5
   bublleRangeY: 5
