@@ -4,6 +4,12 @@ public sealed class GameInitializer : MonoBehaviour
 {
     [SerializeField] private Spawner spawner;
     [SerializeField] private GameConfig gameConfig;
+    [SerializeField] private Timer timer;
+    [SerializeField] private MainMenuView mainMenuView;
+    [SerializeField] private GameMenuView gameMenuView;
+    [SerializeField] private PauseMenuView pauseMenuView;
+    [SerializeField] private EndGameMenuView endGameMenuView;
+    [SerializeField] private GameObject blocker;
     
     private Player player;
 
@@ -20,8 +26,8 @@ public sealed class GameInitializer : MonoBehaviour
         if (success)
         {
             player = new Player();
-            GameManager gameManager = new GameManager(spawner, gameConfig, player);
-            gameManager.Start();
+            GameManager gameManager = new GameManager(spawner, gameConfig, player, timer, mainMenuView, gameMenuView,
+                pauseMenuView, endGameMenuView, blocker);
         }
         else InitServer();
     }

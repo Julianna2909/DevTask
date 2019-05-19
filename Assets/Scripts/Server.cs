@@ -14,8 +14,8 @@ public sealed class Server
 
 	public void Init()
 	{
-		PlayerDataLoad();
+		LoadPlayerData();
 	}
 	
-	public void PlayerDataLoad() => UserDataLoaded?.Invoke(true);
+	public void LoadPlayerData() => UserDataLoaded?.Invoke(true);
 }

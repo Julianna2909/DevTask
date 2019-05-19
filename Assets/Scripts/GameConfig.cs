@@ -5,6 +5,7 @@ using UnityEngine;
 public sealed class GameConfig: ScriptableObject
 {
     [SerializeField] private List<Color> colors;
+    [SerializeField] private int gameDuration;
     [SerializeField] private float spawnRate;
     
     [SerializeField] private float bublleRangeX;
@@ -13,6 +14,7 @@ public sealed class GameConfig: ScriptableObject
     [SerializeField] private int bubblePoints;
 
     public List<Color> Colors => colors;
+    public int GameDuration => gameDuration;
     public float SpawnRate => spawnRate;
 
     public float BublleRangeX => bublleRangeX;

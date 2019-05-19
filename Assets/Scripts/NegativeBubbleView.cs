@@ -9,10 +9,5 @@ public sealed class NegativeBubbleView : BubbleView
             Hide();
         }
         
-        protected internal override void Init(Color color)
-        {
-            points = GameManager.Instance.GameConfig.BubblePoints;
-            spriteRenderer.color = Color.red;
-            Show();
-        }
+        public override void Init(Color color, int points) => base.Init(Color.red, points);
     }

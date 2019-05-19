@@ -7,9 +7,9 @@ public class BubbleView : MonoBehaviour
     protected int points;
     protected bool isShowing;
 
-    protected internal virtual void Init(Color color)
+    public virtual void Init(Color color, int points)
     {
-        points = GameManager.Instance.GameConfig.BubblePoints;
+        this.points = points;
         spriteRenderer.color = color;
         Show();
     }
